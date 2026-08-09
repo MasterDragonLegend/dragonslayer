@@ -20,13 +20,16 @@ jobs:
 
       - name: Verify Raster Analytics activation
         id: verify
+        # Keep this non-fatal so the summary and explicit fail-closed gate below always run.
         continue-on-error: true
         env:
           # Required configuration:
           # - Repository variable: RASTER_ANALYTICS_STATUS_URL
           # - Repository or environment secret: RASTER_ANALYTICS_TOKEN
+          # - Optional repository or environment secret: RASTER_ANALYTICS_GITHUB_PAT
           RASTER_ANALYTICS_STATUS_URL: ${{ vars.RASTER_ANALYTICS_STATUS_URL }}
           RASTER_ANALYTICS_TOKEN: ${{ secrets.RASTER_ANALYTICS_TOKEN }}
+          RASTER_ANALYTICS_GITHUB_PAT: ${{ secrets.RASTER_ANALYTICS_GITHUB_PAT }}
         run: python3 scripts/verify_raster_analytics.py
 
       - name: Publish verification summary
@@ -44,8 +47,15 @@ jobs:
 
       - name: Require Raster Analytics activation
         if: always()
+        env:
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+          RASTER_ANALYTICS_ACTIVATED: ${{ steps.verify.outputs.raster_analytics_activated }}
         run: |
-          if [ "${{ steps.verify.outputs.raster_analytics_activated }}" != "true" ]; then
+          if [ "$VERIFY_OUTCOME" != "success" ]; then
+            echo "Raster Analytics verification did not complete successfully; inspect the previous step output."
+            exit 1
+          fi
+          if [ "$RASTER_ANALYTICS_ACTIVATED" != "true" ]; then
             echo "Raster Analytics is not activated for ${GITHUB_REPOSITORY}."
             exit 1
           fi
