@@ -1,0 +1,51 @@
+name: Raster Analytics validation
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-raster-analytics:
+    runs-on: ubuntu-latest
+    outputs:
+      raster_analytics_activated: ${{ steps.verify.outputs.raster_analytics_activated }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify Raster Analytics activation
+        id: verify
+        continue-on-error: true
+        env:
+          # Required configuration:
+          # - Repository variable: RASTER_ANALYTICS_STATUS_URL
+          # - Repository or environment secret: RASTER_ANALYTICS_TOKEN
+          RASTER_ANALYTICS_STATUS_URL: ${{ vars.RASTER_ANALYTICS_STATUS_URL }}
+          RASTER_ANALYTICS_TOKEN: ${{ secrets.RASTER_ANALYTICS_TOKEN }}
+        run: python3 scripts/verify_raster_analytics.py
+
+      - name: Publish verification summary
+        if: always()
+        run: |
+          echo "raster_analytics_activated: ${{ steps.verify.outputs.raster_analytics_activated }}"
+          {
+            echo "## Raster Analytics verification"
+            echo
+            echo "- raster_analytics_activated: \`${{ steps.verify.outputs.raster_analytics_activated }}\`"
+            echo "- verification_step_outcome: \`${{ steps.verify.outcome }}\`"
+            echo "- repository: \`${{ github.repository }}\`"
+            echo "- ref: \`${{ github.ref_name }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Require Raster Analytics activation
+        if: always()
+        run: |
+          if [ "${{ steps.verify.outputs.raster_analytics_activated }}" != "true" ]; then
+            echo "Raster Analytics is not activated for ${GITHUB_REPOSITORY}."
+            exit 1
+          fi
