@@ -37,7 +37,7 @@ Hub activation for `MasterDragonLegend/dragonslayer` must also be granted in the
 
 ### Workflow
 
-\`.github/workflows/raster-analytics-validation.yml\` runs on push to \`main\` and on manual **Actions → Raster Analytics validation → Run workflow**.
+`.github/workflows/raster-analytics-validation.yml` runs on push to `main` and on manual **Actions → Raster Analytics validation → Run workflow**.
 
 ### Local check
 
