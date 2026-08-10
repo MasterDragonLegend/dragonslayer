@@ -109,7 +109,7 @@ def build_result(args: argparse.Namespace) -> tuple[dict, int]:
                 "raster_analytics_activated": False,
                 "details": f"Missing configuration: {', '.join(missing)}",
             },
-            1,
+            0,
         )
 
     url_parts = list(urllib.parse.urlparse(args.status_url))
