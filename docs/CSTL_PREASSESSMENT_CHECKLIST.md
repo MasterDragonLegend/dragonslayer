@@ -56,6 +56,32 @@ This is a **preparation** list only. Completing it does **not** mean the module 
 - [ ] Modules In Process (MIP) display preference decided (public vs not displayed)
 - [ ] **CMVP claim remains false** until Active certificate exists
 
+## G. Validation timeline estimates (indicative only)
+
+These are **planning ranges**, not guarantees. Actual duration depends on module complexity, security level, OE count, submission quality, lab queue, and CMVP backlog. CMVP may drop modules that exceed program deadlines in Review.
+
+| Phase | Typical range | Notes |
+|-------|----------------|--------|
+| Vendor readiness (this checklist) | 1–6+ months | Boundary, docs, entropy data, CAVP prep |
+| CSTL testing (IUT) | 3–9+ months | Algorithm tests, code/docs review, operational tests; longer for Level ≥3 or multi-OE |
+| CAVP algorithm certificates | Often concurrent with lab work | ACVTS production access is lab-mediated |
+| Entropy (SP 800-90B) evidence | Concurrent; can extend lab phase | Data collection + report review is often critical path |
+| CMVP after report submission | Often **~12–18 months** end-to-end industry reports; early FIPS 140-3 averages near **~1.6 years** report→cert in published samples | Queue: Cost Recovery → Pending Review → Review → comment resolution |
+| CMVP “Review” program limit | On the order of **24 months** in Review or risk drop (see Management Manual) | Plan resubmission strategy |
+| **End-to-end (contract → Active cert)** | Commonly **12–24+ months** | High level, PQC-first, or incomplete packages trend longer |
+
+**Faster paths (relative)**  
+- Software Level 1, single OE, complete package, experienced lab  
+- Rebrand / update scenarios (when applicable) vs full submission  
+
+**Slower paths (relative)**  
+- Level 3–4 physical security, many OEs, weak entropy documentation  
+- First-time PQC claims while IG/review practice is still settling  
+
+Automation efforts (e.g. NCCoE ACMVP work) aim to reduce review latency over time; do not assume shorter times until reflected in live MIP statistics.
+
+Always confirm current MIP queue behavior and lab quotes for the specific module.
+
 ## Related references
 
 - [CMVP](https://csrc.nist.gov/projects/cryptographic-module-validation-program)
