@@ -7,6 +7,8 @@ Beta software for DOW
 CMVP/FIPS 140-3 integration is built in and can be used once a certified module is wired.  
 **Until then, certification is not claimed.**
 
+See also: [CSTL pre-assessment checklist](docs/CSTL_PREASSESSMENT_CHECKLIST.md).
+
 ## Raster Analytics validation
 
 ```bash
