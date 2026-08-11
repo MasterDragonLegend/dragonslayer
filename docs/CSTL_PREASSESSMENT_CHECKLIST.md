@@ -136,6 +136,42 @@ Security levels **1–4** increase assurance (especially physical and identity-b
 
 **Program rule for this repository:** integration documentation only — **no CMVP certificate**, **no validation claim**.
 
+## K. ACVP capability registration (algorithm testing)
+
+Official CAVP testing uses **ACVP** against NIST **ACVTS** (demo or production).
+
+**Access**
+- **Demo** (`demo.acvts.nist.gov`): request via NIST (CSR for TLS client cert + TOTP); sandbox for client and IUT practice  
+- **Prod**: NVLAP **17ACVT** / CST labs only; proficiency on demo required first  
+
+**Registration flow (simplified)**
+1. Authenticate (mTLS + TOTP → access token)  
+2. Create **test session** with a **capability registration** JSON (algorithms, revisions, modes, key sizes, prereqVals, OE metadata as required)  
+3. Server returns **vector set** IDs and prompts  
+4. IUT processes prompts → submit results JSON  
+5. Server validates → lab continues toward CAVP certificate issuance  
+
+Registration must list only what the **module under test** actually implements on the claimed OE. Over-registering unsupported modes causes failures.
+
+Protocol docs: [pages.nist.gov/ACVP](https://pages.nist.gov/ACVP/) · [github.com/usnistgov/ACVP](https://github.com/usnistgov/ACVP)
+
+## L. NIST PQC standards (module relevance)
+
+| ID | Name | Origin | Role | Status |
+|----|------|--------|------|--------|
+| **FIPS 203** | ML-KEM | CRYSTALS-Kyber | Key encapsulation | Final (Aug 2024) |
+| **FIPS 204** | ML-DSA | CRYSTALS-Dilithium | Signatures | Final (Aug 2024) |
+| **FIPS 205** | SLH-DSA | SPHINCS+ | Hash-based signatures (backup) | Final (Aug 2024) |
+| **FIPS 206** | FN-DSA | FALCON | Signatures | In development |
+| — | **HQC** | Code-based KEM | Backup KEM to ML-KEM | Selected Mar 2025; standard drafting |
+
+For CMVP modules claiming PQC:
+- Obtain **CAVP** coverage for each parameter set used  
+- Implement **CAST** self-tests per current **FIPS 140-3 IG**  
+- Keep public claims aligned: this repo still **does not claim** CMVP validation  
+
+Timeline estimates remain in **§G** (end-to-end commonly 12–24+ months).
+
 ## Related references
 
 - [CMVP](https://csrc.nist.gov/projects/cryptographic-module-validation-program)
