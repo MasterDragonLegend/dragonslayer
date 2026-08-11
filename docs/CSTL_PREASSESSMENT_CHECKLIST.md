@@ -82,6 +82,60 @@ Automation efforts (e.g. NCCoE ACMVP work) aim to reduce review latency over tim
 
 Always confirm current MIP queue behavior and lab quotes for the specific module.
 
+## H. CMVP testing phases (what the lab and CMVP actually do)
+
+High-level phases after the vendor package is ready:
+
+1. **Kickoff / intake** — SOW, TID, document delivery, optional IUT listing  
+2. **Algorithm path (CAVP)** — ACVTS vectors, results, algorithm certificates on claimed OEs  
+3. **Entropy path (SP 800-90B)** — raw/restart data, health tests, entropy report  
+4. **Module conformance testing (CSTL)** — against ISO/IEC 19790 + 24759, SP 800-140x, and FIPS 140-3 IG  
+   - Specification & interfaces  
+   - Roles, services, authentication  
+   - Software/firmware security & integrity  
+   - Operating environment  
+   - Physical / non-invasive (as required by level)  
+   - SSP management  
+   - Self-tests (including algorithm CASTs)  
+   - Life-cycle assurance  
+5. **Report assembly** — Security Policy, test evidence, Web Cryptik submission  
+6. **CMVP MIP states** — Cost Recovery → Pending Review → Review → comment resolution / coordination  
+7. **Outcome** — Active certificate **or** drop / fix / resubmit  
+
+Vendors should budget iteration loops in steps 4 and 6; incomplete entropy or self-test evidence is a common delay.
+
+## I. FIPS 140-3 standards map (quick reference)
+
+| Document | Role |
+|----------|------|
+| **FIPS 140-3** | US federal standard; points at ISO requirements |
+| **ISO/IEC 19790** | Security requirements for cryptographic modules |
+| **ISO/IEC 24759** | Test requirements (lab assertions) |
+| **SP 800-140** series | CMVP-allowed modifications / annex control |
+| **FIPS 140-3 IG** | Binding interpretations (self-tests, boundaries, PQC CAST, etc.) |
+| **CMVP Management Manual** | Process, MIP states, submission scenarios |
+| **CAVP / ACVP** | Algorithm testing (prerequisite) |
+| **SP 800-90A/B/C** | DRBG, entropy sources, RBG constructions |
+
+Security levels **1–4** increase assurance (especially physical and identity-based authentication at higher levels). Most software library modules target Level 1.
+
+## J. Risk mitigation strategies
+
+| Risk | Mitigation |
+|------|------------|
+| Unclear cryptographic boundary | Freeze boundary diagram and service list before lab start; avoid “moving walls” mid-test |
+| CAVP / OE mismatch | Run algorithm tests on **every** claimed OE; keep build flags identical to shipping bit |
+| Entropy (90B) failure or delay | Collect raw + restart datasets early; document noise source; use vetted conditioning where possible |
+| Self-test gaps (esp. PQC) | Map each Approved algorithm to CAST/KAT per current IG before submission |
+| Doc churn during Review | Treat Security Policy as controlled; version every lab-facing drop |
+| CMVP queue / 24‑month Review limit | Complete package first time; respond to comments on a clock; plan UPDT vs full resubmit |
+| Over-claiming “FIPS validated” | Public wording: **not claimed** until Active cert; never say “FIPS compliant” as a substitute |
+| Scope creep (extra OEs, Level jump) | Change control with lab; repriced SOW for new OEs or physical level |
+| Staff / knowledge loss | Single validation lead + lab-shared evidence index |
+| Post-cert changes | Know submission scenarios (UPDT, OEUP, ALG, CVE, …) before shipping hotfixes |
+
+**Program rule for this repository:** integration documentation only — **no CMVP certificate**, **no validation claim**.
+
 ## Related references
 
 - [CMVP](https://csrc.nist.gov/projects/cryptographic-module-validation-program)
