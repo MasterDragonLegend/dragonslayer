@@ -95,6 +95,67 @@ def allows_github_pat(status_url: str) -> bool:
     return hostname in {"github.com", "api.github.com"}
 
 
+def is_statusiq_dashboard(status_url: str) -> bool:
+    host = (urllib.parse.urlparse(status_url).hostname or "").lower()
+    scheme = urllib.parse.urlparse(status_url).scheme.lower()
+    return host == "hub-status.vantor.com" or scheme == "sfvn"
+
+
+def probe_maxar_raster(repository: str) -> tuple[dict, int]:
+    """SFVN permanent check: Discovery cloud-optimized-archive with MAXAR_API_KEY."""
+    key = os.environ.get("MAXAR_API_KEY") or os.environ.get("VITE_API_KEY") or ""
+    if not key:
+        return (
+            {
+                "repository": repository,
+                "raster_analytics_activated": False,
+                "details": "MAXAR_API_KEY missing for SFVN Maxar raster probe",
+                "probe": "maxar_discovery_cloud_optimized_archive",
+            },
+            1,
+        )
+    url = "https://api.maxar.com/discovery/v1/search?maxar_api_key=" + key
+    body = json.dumps(
+        {
+            "collections": ["cloud-optimized-archive"],
+            "bbox": [-105.0, 40.0, -104.0, 41.0],
+            "limit": 1,
+        }
+    ).encode()
+    req = urllib.request.Request(
+        url,
+        data=body,
+        method="POST",
+        headers={"Content-Type": "application/json", "User-Agent": "SFVN-raster"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+        feats = payload.get("features") or []
+        activated = bool(feats)
+        sample = (feats[0].get("id") if feats else None)
+        return (
+            {
+                "repository": repository,
+                "raster_analytics_activated": activated,
+                "details": "SFVN Maxar Discovery probe (hub-status.vantor.com is StatusIQ HTML, not used)",
+                "probe": "maxar_discovery_cloud_optimized_archive",
+                "sample_id": sample,
+            },
+            0 if activated else 1,
+        )
+    except Exception as exc:
+        return (
+            {
+                "repository": repository,
+                "raster_analytics_activated": False,
+                "details": f"Maxar Discovery probe failed: {type(exc).__name__}",
+                "probe": "maxar_discovery_cloud_optimized_archive",
+            },
+            1,
+        )
+
+
 def build_result(args: argparse.Namespace) -> tuple[dict, int]:
     missing = []
     if not args.status_url:
@@ -111,6 +172,9 @@ def build_result(args: argparse.Namespace) -> tuple[dict, int]:
             },
             0,
         )
+
+    if is_statusiq_dashboard(args.status_url) or not args.status_url:
+        return probe_maxar_raster(args.repository)
 
     url_parts = list(urllib.parse.urlparse(args.status_url))
     query = urllib.parse.parse_qs(url_parts[4], keep_blank_values=True)
