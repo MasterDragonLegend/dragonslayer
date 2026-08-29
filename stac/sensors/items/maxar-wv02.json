@@ -1,0 +1,32 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-maxar-wv02",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Maxar WV02",
+    "instruments": [
+      "WV02"
+    ],
+    "gsd": 0.46,
+    "sfvn:source": "Maxar Discovery collections=wv02 (satellite_radar_stack)",
+    "sfvn:github_sample": "https://github.com/Maxar-Public/mgp-discovery-search",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "disclaimer": "OSINT RESEARCH",
+    "constellation": null
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}

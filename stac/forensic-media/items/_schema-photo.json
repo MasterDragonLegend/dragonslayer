@@ -1,0 +1,27 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "schema-photo",
+  "collection": "sfvn-forensic-media",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "PHOTO schema \u2014 no asset seated",
+    "sfvn:media": "photo",
+    "sfvn:seated": false,
+    "sfvn:sha256": null,
+    "sfvn:exif": null,
+    "sfvn:plate_readable": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ]
+}

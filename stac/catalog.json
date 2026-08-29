@@ -1,0 +1,50 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Catalog",
+  "id": "sfvn-stac",
+  "title": "Strike Force Viper Net STAC",
+  "description": "Owner stack is SFVN. Historic names Master Dragon / dragonslayer / Lonewolf / Master Python are aliases.",
+  "sfvn:github": "https://github.com/MasterDragonLegend/dragonslayer",
+  "sfvn:pat_seated": true,
+  "links": [
+    {
+      "rel": "self",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./building-plate/collection.json",
+      "type": "application/json",
+      "title": "building-plate"
+    },
+    {
+      "rel": "child",
+      "href": "./sensors/collection.json",
+      "type": "application/json",
+      "title": "sensors"
+    },
+    {
+      "rel": "child",
+      "href": "./sfvn-backbone/collection.json",
+      "type": "application/json",
+      "title": "sfvn-backbone"
+    },
+    {
+      "rel": "child",
+      "href": "./forensic-media/collection.json",
+      "type": "application/json",
+      "title": "forensic-media"
+    },
+    {
+      "rel": "alternate",
+      "type": "application/json",
+      "href": "./api/landing.json",
+      "title": "STAC API landing (static)"
+    }
+  ],
+  "conformsTo": [
+    "https://api.stacspec.org/v1.0.0/core"
+  ],
+  "sfvn:api": "static_catalog_only"
+}

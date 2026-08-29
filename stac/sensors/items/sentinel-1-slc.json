@@ -1,0 +1,32 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-sentinel-1-slc",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Sentinel-1 SLC",
+    "instruments": [
+      "C-SAR"
+    ],
+    "gsd": 5,
+    "sfvn:source": "ASF + SNAP + SNAPHU + MintPy",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "sfvn:use": "InSAR research; invert_claimed=false",
+    "disclaimer": "OSINT RESEARCH",
+    "sar:frequency_band": "C"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}

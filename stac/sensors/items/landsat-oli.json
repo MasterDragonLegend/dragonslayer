@@ -1,0 +1,31 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-landsat-oli",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Landsat 8/9 OLI",
+    "instruments": [
+      "OLI"
+    ],
+    "gsd": 15,
+    "sfvn:source": "NASA CMR / Earthdata in nasa_clients",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "disclaimer": "OSINT RESEARCH",
+    "constellation": null
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}

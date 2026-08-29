@@ -1,0 +1,37 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "sfvn-building-plate",
+  "title": "SFVN building plate / floor / suite / room evidence",
+  "description": "Evidence items that could support seating a plate, floor, suite, room photo, or furniture-resolving image. Empty until a dated public asset exists. City centroids do not belong here. Sentinel-2 (~10 m) and Sentinel-1 GRD do not resolve furniture. WorldView-class ~0.3 m does not resolve furniture. Furniture needs ground photo or sub-0.05 m with a clear interior vantage — still not a door unless the plate is readable.",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {"bbox": [[-180, -90, 180, 90]]},
+    "temporal": {"interval": [[null, null]]}
+  },
+  "keywords": ["plate", "suite", "floor", "room", "facade", "OSINT", "SFVN"],
+  "summaries": {
+    "sfvn:evidence_class": [
+      "official_plate",
+      "dated_facade_photo",
+      "suite_number",
+      "floor_plan_public",
+      "room_photo",
+      "furniture_resolving",
+      "compound_geoloc_only"
+    ],
+    "sfvn:seated": ["false"],
+    "gsd": {"minimum": 0.03, "maximum": 10.0}
+  },
+  "item_assets": {
+    "thumbnail": {"type": "image/jpeg", "roles": ["thumbnail"]},
+    "plate": {"type": "image/jpeg", "roles": ["data"], "title": "Readable building plate"},
+    "room": {"type": "image/jpeg", "roles": ["data"], "title": "Room / interior still"}
+  },
+  "links": [
+    {"rel": "root", "href": "../catalog.json", "type": "application/json"},
+    {"rel": "parent", "href": "../catalog.json", "type": "application/json"},
+    {"rel": "self", "href": "./collection.json", "type": "application/json"},
+    {"rel": "item", "href": "./items/qa-doha-wadi-rawdan-20250909.json", "type": "application/json"}
+  ]
+}

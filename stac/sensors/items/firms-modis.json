@@ -1,0 +1,31 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-firms-modis",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "FIRMS MODIS thermal",
+    "instruments": [
+      "MODIS"
+    ],
+    "gsd": 1000,
+    "sfvn:source": "FIRMS_MAP_KEY + firms_wfs",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "disclaimer": "OSINT RESEARCH",
+    "constellation": null
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}

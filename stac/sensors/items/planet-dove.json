@@ -1,0 +1,31 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-planet-dove",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Planet Dove (opt-in)",
+    "instruments": [
+      "Dove"
+    ],
+    "gsd": 3.0,
+    "sfvn:source": "PLANET_API_KEY opt-in",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "disclaimer": "OSINT RESEARCH",
+    "constellation": null
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}

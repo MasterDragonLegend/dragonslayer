@@ -1,0 +1,32 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-sentinel-1-grd",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Sentinel-1 GRD",
+    "instruments": [
+      "C-SAR"
+    ],
+    "gsd": 10,
+    "sfvn:source": "ASF / Planetary Computer / SNAP",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "sfvn:use": "sigma0 / structure context",
+    "disclaimer": "OSINT RESEARCH",
+    "sar:frequency_band": "C"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "qa-doha-wadi-rawdan-20250909",
+  "collection": "sfvn-building-plate",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [51.509586, 25.357011]
+  },
+  "bbox": [51.5090, 25.3565, 51.5102, 25.3575],
+  "properties": {
+    "datetime": "2025-09-09T12:46:00Z",
+    "title": "Doha Wadi Rawdan reported compound — geoloc only",
+    "description": "Airwars ISQT250909 / Evan Hill exact geoloc of 9 Sep 2025 strike reporting. Evidence class is compound_geoloc_only. No official plate asset. No suite. No room photo in this catalog. Not furniture-resolving.",
+    "sfvn:evidence_class": "compound_geoloc_only",
+    "sfvn:plate": false,
+    "sfvn:floor": false,
+    "sfvn:suite": false,
+    "sfvn:room_photo": false,
+    "sfvn:furniture_resolving": false,
+    "sfvn:seated_as": "dated_reported_compound",
+    "sfvn:interior_seated": false,
+    "sfvn:gsd_m": null,
+    "sfvn:folder": "proxy_hamas_command",
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {"rel": "collection", "href": "../collection.json", "type": "application/json"},
+    {"rel": "parent", "href": "../collection.json", "type": "application/json"},
+    {"rel": "root", "href": "../../catalog.json", "type": "application/json"}
+  ],
+  "assets": {}
+}

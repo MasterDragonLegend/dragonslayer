@@ -1,0 +1,23 @@
+{
+  "stac_version": "1.0.0",
+  "id": "sfvn-stac-api",
+  "type": "Catalog",
+  "title": "SFVN STAC landing (static)",
+  "description": "On-disk STAC catalog. Not a running STAC API server. Item Search and OGC Features are NOT implemented until a process binds /search.",
+  "conformsTo": [
+    "https://api.stacspec.org/v1.0.0/core"
+  ],
+  "not_implemented": [
+    "https://api.stacspec.org/v1.0.0/item-search",
+    "https://api.stacspec.org/v1.0.0/ogcapi-features",
+    "https://api.stacspec.org/v1.0.0/collections"
+  ],
+  "links": [
+    {"rel": "self", "type": "application/json", "href": "./landing.json"},
+    {"rel": "root", "type": "application/json", "href": "../catalog.json"},
+    {"rel": "child", "type": "application/json", "href": "../sensors/collection.json"},
+    {"rel": "child", "type": "application/json", "href": "../forensic-media/collection.json"},
+    {"rel": "child", "type": "application/json", "href": "../building-plate/collection.json"},
+    {"rel": "child", "type": "application/json", "href": "../sfvn-backbone/collection.json"}
+  ]
+}

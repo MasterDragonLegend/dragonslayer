@@ -1,0 +1,26 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "schema-audio",
+  "collection": "sfvn-forensic-media",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "AUDIO schema \u2014 no asset seated",
+    "sfvn:media": "audio",
+    "sfvn:seated": false,
+    "sfvn:sha256": null,
+    "sfvn:duration_s": null,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ]
+}

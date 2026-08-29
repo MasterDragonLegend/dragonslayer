@@ -1,0 +1,32 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-maxar-wv03-vnir",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Maxar / Vantor WV03 VNIR",
+    "instruments": [
+      "WV03"
+    ],
+    "gsd": 0.31,
+    "sfvn:source": "satellite_radar_stack Maxar Discovery (entitled) + Esri Wayback metadata",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "sfvn:note": "0.31 m can show roof color and large vehicles. Does not read a suite plate or furniture. Rajaee Wayback 26334 is metadata-only.",
+    "disclaimer": "OSINT RESEARCH",
+    "constellation": null
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}

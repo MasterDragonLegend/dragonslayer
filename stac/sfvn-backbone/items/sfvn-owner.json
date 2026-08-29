@@ -1,0 +1,18 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sfvn-owner",
+  "collection": "sfvn-backbone",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Strike Force Viper Net LLC",
+    "sfvn:aliases": ["Master Dragon", "MasterDragonLegend", "dragonslayer", "Lonewolf", "Master Python", "Master Legend"],
+    "sfvn:github": "https://github.com/MasterDragonLegend/dragonslayer",
+    "sfvn:pat_seated": true,
+    "sfvn:pat_in_this_item": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [{"rel": "collection", "href": "../collection.json"}],
+  "assets": {}
+}

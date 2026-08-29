@@ -1,0 +1,14 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "sfvn-backbone",
+  "title": "Strike Force Viper Net owner stack",
+  "description": "Dragonslayer, Master Dragon, Lonewolf, Master Python, Master Legend are SFVN. GitHub https://github.com/MasterDragonLegend/dragonslayer. PAT seated in secrets.env only.",
+  "license": "proprietary",
+  "extent": {"spatial": {"bbox": [[-180, -90, 180, 90]]}, "temporal": {"interval": [[null, null]]}},
+  "keywords": ["SFVN", "dragonslayer", "Master Dragon", "Lonewolf", "Master Python"],
+  "links": [
+    {"rel": "root", "href": "../catalog.json", "type": "application/json"},
+    {"rel": "item", "href": "./items/sfvn-owner.json", "type": "application/json"}
+  ]
+}

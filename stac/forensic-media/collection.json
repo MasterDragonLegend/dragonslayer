@@ -1,0 +1,27 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "sfvn-forensic-media",
+  "title": "SFVN forensic photo / video / audio research",
+  "description": "Evidence items for dated public stills, video, and audio. Empty assets until a file is seated. Does not invent interiors. Hash + capture time required before seating.",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {"bbox": [[-180, -90, 180, 90]]},
+    "temporal": {"interval": [[null, null]]}
+  },
+  "keywords": ["forensic", "photo", "video", "audio", "OSINT", "SFVN"],
+  "summaries": {
+    "sfvn:media": ["photo", "video", "audio"],
+    "sfvn:seated": [false]
+  },
+  "item_assets": {
+    "media": {"type": "application/octet-stream", "roles": ["data"]},
+    "hash": {"type": "text/plain", "roles": ["metadata"]}
+  },
+  "links": [
+    {"rel": "root", "href": "../catalog.json", "type": "application/json"},
+    {"rel": "item", "href": "./items/_schema-photo.json", "type": "application/json"},
+    {"rel": "item", "href": "./items/_schema-video.json", "type": "application/json"},
+    {"rel": "item", "href": "./items/_schema-audio.json", "type": "application/json"}
+  ]
+}

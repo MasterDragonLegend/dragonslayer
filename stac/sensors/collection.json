@@ -1,0 +1,118 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "sfvn-sensors",
+  "title": "SFVN sensor card \u2014 stack sensors only",
+  "description": "Sensors already wired in Strike Force / satellite_radar_stack. GSD is catalog class, not a tasked collect. None of these sensors seat furniture. Plate/suite/room require a ground still or an official filing, not a new bird.",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "sensor",
+    "GSD",
+    "SFVN",
+    "OSINT"
+  ],
+  "summaries": {
+    "ssys:instruments": [
+      "MSI",
+      "C-SAR",
+      "WV03",
+      "Dove",
+      "VIIRS",
+      "MODIS",
+      "WorldImagery"
+    ],
+    "sfvn:plate_capable": [
+      false
+    ],
+    "sfvn:furniture_capable": [
+      false
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sentinel-2-l2a.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sentinel-1-grd.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sentinel-1-slc.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/maxar-wv03-vnir.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/planet-dove.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gibs-viirs.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/esri-world-imagery.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/maxar-wv02.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/landsat-oli.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/firms-modis.json",
+      "type": "application/json"
+    }
+  ]
+}
