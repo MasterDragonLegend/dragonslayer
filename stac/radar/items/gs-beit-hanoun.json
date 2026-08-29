@@ -1,0 +1,69 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "gs-beit-hanoun",
+  "collection": "sfvn-radar",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      34.5361,
+      31.5389
+    ]
+  },
+  "properties": {
+    "datetime": "2026-08-28T15:40:13.405922Z",
+    "title": "Beit Hanoun \u2014 northern corridor AOI",
+    "sfvn:folder": "proxy_hamas_logi",
+    "sfvn:raster_id": null,
+    "sfvn:raster_seated": false,
+    "sfvn:s1_id": "S1D_IW_GRDH_1SDV_20260828T154000_20260828T154025_004328_007FB7",
+    "sfvn:s1_seated": true,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
+    "platform": "sentinel-1d",
+    "interior": false,
+    "door": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "vv": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/28/IW/DV/S1D_IW_GRDH_1SDV_20260828T154000_20260828T154025_004328_007FB7_BB4D/measurement/iw-vv.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VV"
+    },
+    "vh": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/28/IW/DV/S1D_IW_GRDH_1SDV_20260828T154000_20260828T154025_004328_007FB7_BB4D/measurement/iw-vh.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VH"
+    },
+    "thumbnail": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/28/IW/DV/S1D_IW_GRDH_1SDV_20260828T154000_20260828T154025_004328_007FB7_BB4D/preview/quick-look.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "thumbnail"
+    }
+  }
+}

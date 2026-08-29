@@ -1,0 +1,69 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "so-mog-roadstead",
+  "collection": "sfvn-radar",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      45.333,
+      2.033
+    ]
+  },
+  "properties": {
+    "datetime": "2026-08-25T02:46:14.708000Z",
+    "title": "Mogadishu roadstead \u2014 mother-ship context",
+    "sfvn:folder": "proxy_houthi_logi",
+    "sfvn:raster_id": "B1300011010C0A10",
+    "sfvn:raster_seated": true,
+    "sfvn:s1_id": "S1D_IW_GRDH_1SDV_20260825T024602_20260825T024627_004276_007DE3",
+    "sfvn:s1_seated": true,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
+    "platform": "sentinel-1d",
+    "interior": false,
+    "door": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "vv": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/25/IW/DV/S1D_IW_GRDH_1SDV_20260825T024602_20260825T024627_004276_007DE3_ECCE/measurement/iw-vv.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VV"
+    },
+    "vh": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/25/IW/DV/S1D_IW_GRDH_1SDV_20260825T024602_20260825T024627_004276_007DE3_ECCE/measurement/iw-vh.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VH"
+    },
+    "thumbnail": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/25/IW/DV/S1D_IW_GRDH_1SDV_20260825T024602_20260825T024627_004276_007DE3_ECCE/preview/quick-look.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "thumbnail"
+    }
+  }
+}

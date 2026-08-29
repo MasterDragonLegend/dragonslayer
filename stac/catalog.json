@@ -41,6 +41,12 @@
       "type": "application/json",
       "href": "./api/landing.json",
       "title": "STAC API landing (static)"
+    },
+    {
+      "rel": "child",
+      "href": "./radar/collection.json",
+      "type": "application/json",
+      "title": "radar"
     }
   ],
   "conformsTo": [

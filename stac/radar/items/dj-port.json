@@ -1,0 +1,69 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "dj-port",
+  "collection": "sfvn-radar",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      43.145,
+      11.607
+    ]
+  },
+  "properties": {
+    "datetime": "2026-08-29T02:59:39.975852Z",
+    "title": "Djibouti Port \u2014 commercial cover node",
+    "sfvn:folder": "proxy_houthi_logi",
+    "sfvn:raster_id": null,
+    "sfvn:raster_seated": false,
+    "sfvn:s1_id": "S1C_IW_GRDH_1SDV_20260829T025927_20260829T025952_009204_0124A0",
+    "sfvn:s1_seated": true,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
+    "platform": "sentinel-1c",
+    "interior": false,
+    "door": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "vv": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/29/IW/DV/S1C_IW_GRDH_1SDV_20260829T025927_20260829T025952_009204_0124A0_6CF7/measurement/iw-vv.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VV"
+    },
+    "vh": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/29/IW/DV/S1C_IW_GRDH_1SDV_20260829T025927_20260829T025952_009204_0124A0_6CF7/measurement/iw-vh.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VH"
+    },
+    "thumbnail": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/29/IW/DV/S1C_IW_GRDH_1SDV_20260829T025927_20260829T025952_009204_0124A0_6CF7/preview/quick-look.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "thumbnail"
+    }
+  }
+}

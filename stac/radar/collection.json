@@ -1,0 +1,266 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "sfvn-radar",
+  "title": "SFVN radar + seated archive pins",
+  "description": "S1 GRD from Earth Search plus Maxar cloud-optimized-archive IDs only where per-pin \u00b10.05 search hit. No interiors.",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "SAR",
+    "Sentinel-1",
+    "Maxar",
+    "SFVN"
+  ],
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-idlib.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/dz-kabyle.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/pk-parachinar.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/so-mog-shabaab.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/ml-gao.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/ml-timbuktu.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-albukamal.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-alhol.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-baghuz.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-deirez.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-kobani.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-mayadin.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-palmyra.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-raqqa.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/eg-arish.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/tn-kairouan.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/af-nangarhar.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/ph-marawi.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/ly-sirte.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/eg-rafah-approach.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/tr-istanbul-hamas.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/qa-doha-hamas.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/qa-doha-wadi-rawdan-20250909.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/sy-damascus.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/eg-cairo-hamas.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/il-kerem-shalom.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-al-mawasi.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-beit-hanoun.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-beit-lahia.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-bureij.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-deir-al-balah.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-erez.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-gaza-city.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-gaza-port.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-gaza-marina.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-jabalia.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-khan-yunis.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-maghazi.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-nuseirat.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/gs-rafah.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/om-muscat.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/om-salalah.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/dj-port.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/so-mog-roadstead.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/mar-gulf-oman.json",
+      "type": "application/json"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "mar-gulf-oman",
+  "collection": "sfvn-radar",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      58.5,
+      24.5
+    ]
+  },
+  "properties": {
+    "datetime": "2026-08-27T14:07:43.429992Z",
+    "title": "Gulf of Oman waypoint context (route)",
+    "sfvn:folder": "proxy_houthi_logi",
+    "sfvn:raster_id": null,
+    "sfvn:raster_seated": false,
+    "sfvn:s1_id": "S1C_IW_GRDH_1SDV_20260827T140726_20260827T140800_009182_0123DE",
+    "sfvn:s1_seated": true,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
+    "platform": "sentinel-1c",
+    "interior": false,
+    "door": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "vv": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/27/IW/DV/S1C_IW_GRDH_1SDV_20260827T140726_20260827T140800_009182_0123DE_A509/measurement/iw-vv.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VV"
+    },
+    "vh": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/27/IW/DV/S1C_IW_GRDH_1SDV_20260827T140726_20260827T140800_009182_0123DE_A509/measurement/iw-vh.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VH"
+    },
+    "thumbnail": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/27/IW/DV/S1C_IW_GRDH_1SDV_20260827T140726_20260827T140800_009182_0123DE_A509/preview/quick-look.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "thumbnail"
+    }
+  }
+}

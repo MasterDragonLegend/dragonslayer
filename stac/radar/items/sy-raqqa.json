@@ -1,0 +1,69 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "sy-raqqa",
+  "collection": "sfvn-radar",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      39.01,
+      35.95
+    ]
+  },
+  "properties": {
+    "datetime": "2026-08-25T03:25:54.692178Z",
+    "title": "Raqqa \u2014 ISIS historical capital assoc",
+    "sfvn:folder": "isis_research",
+    "sfvn:raster_id": null,
+    "sfvn:raster_seated": false,
+    "sfvn:s1_id": "S1C_IW_GRDH_1SDV_20260825T032542_20260825T032607_009146_012298",
+    "sfvn:s1_seated": true,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
+    "platform": "sentinel-1c",
+    "interior": false,
+    "door": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "vv": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/25/IW/DV/S1C_IW_GRDH_1SDV_20260825T032542_20260825T032607_009146_012298_F777/measurement/iw-vv.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VV"
+    },
+    "vh": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/25/IW/DV/S1C_IW_GRDH_1SDV_20260825T032542_20260825T032607_009146_012298_F777/measurement/iw-vh.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VH"
+    },
+    "thumbnail": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/25/IW/DV/S1C_IW_GRDH_1SDV_20260825T032542_20260825T032607_009146_012298_F777/preview/quick-look.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "thumbnail"
+    }
+  }
+}

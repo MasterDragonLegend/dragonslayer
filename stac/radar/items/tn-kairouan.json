@@ -1,0 +1,69 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sar/v1.3.2/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "tn-kairouan",
+  "collection": "sfvn-radar",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      10.0963,
+      35.6781
+    ]
+  },
+  "properties": {
+    "datetime": "2026-08-29T05:21:16.933410Z",
+    "title": "Kairouan \u2014 Tunisia recruitment context",
+    "sfvn:folder": "isis_research",
+    "sfvn:raster_id": "B1100011010BCD10",
+    "sfvn:raster_seated": true,
+    "sfvn:s1_id": "S1D_IW_GRDH_1SDV_20260829T052104_20260829T052129_004336_007FFF",
+    "sfvn:s1_seated": true,
+    "sar:frequency_band": "C",
+    "sar:instrument_mode": "IW",
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "GRD",
+    "platform": "sentinel-1d",
+    "interior": false,
+    "door": false,
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "vv": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/29/IW/DV/S1D_IW_GRDH_1SDV_20260829T052104_20260829T052129_004336_007FFF_05D3/measurement/iw-vv.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VV"
+    },
+    "vh": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/29/IW/DV/S1D_IW_GRDH_1SDV_20260829T052104_20260829T052129_004336_007FFF_05D3/measurement/iw-vh.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "title": "VH"
+    },
+    "thumbnail": {
+      "href": "https://sentinel-s1-l1c.s3.amazonaws.com/GRD/2026/8/29/IW/DV/S1D_IW_GRDH_1SDV_20260829T052104_20260829T052129_004336_007FFF_05D3/preview/quick-look.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "thumbnail"
+    }
+  }
+}
