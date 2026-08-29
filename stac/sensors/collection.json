@@ -36,6 +36,7 @@
       "MSI",
       "C-SAR",
       "WV03",
+      "WV-Legion",
       "Dove",
       "VIIRS",
       "MODIS",
@@ -82,6 +83,11 @@
     {
       "rel": "item",
       "href": "./items/maxar-wv03-vnir.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/maxar-wv-legion.json",
       "type": "application/json"
     },
     {

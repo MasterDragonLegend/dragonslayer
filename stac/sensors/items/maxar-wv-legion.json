@@ -1,0 +1,38 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "sensor-maxar-wv-legion",
+  "collection": "sfvn-sensors",
+  "geometry": null,
+  "properties": {
+    "datetime": null,
+    "title": "Vantor WorldView Legion",
+    "instruments": ["WV-Legion"],
+    "constellation": "worldview-legion",
+    "gsd": 0.34,
+    "eo:bands": [
+      {"name": "pan", "gsd": 0.34},
+      {"name": "coastal", "gsd": 1.36},
+      {"name": "blue", "gsd": 1.36},
+      {"name": "green", "gsd": 1.36},
+      {"name": "yellow", "gsd": 1.36},
+      {"name": "red", "gsd": 1.36},
+      {"name": "rededge1", "gsd": 1.36},
+      {"name": "rededge2", "gsd": 1.36},
+      {"name": "nir", "gsd": 1.36}
+    ],
+    "sfvn:source": "Vantor Hub / Maxar Discovery cloud-optimized-archive",
+    "sfvn:plate_capable": false,
+    "sfvn:furniture_capable": false,
+    "sfvn:note": "Six-satellite Legion. ~0.34 m pan / 1.36 m 8-band VNIR. Up to ~15 revisits/day class. Does not seat a suite plate or furniture. No SFVN pin has a Legion-specific collect id until Discovery returns one.",
+    "disclaimer": "OSINT RESEARCH"
+  },
+  "links": [
+    {"rel": "collection", "href": "../collection.json"}
+  ],
+  "assets": {},
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.2.0/schema.json"
+  ]
+}
