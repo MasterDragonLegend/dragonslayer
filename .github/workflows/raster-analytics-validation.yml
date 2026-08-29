@@ -21,7 +21,7 @@ jobs:
       - name: Verify Raster Analytics activation
         id: verify
         env:
-          RASTER_ANALYTICS_STATUS_URL: ${{ vars.RASTER_ANALYTICS_STATUS_URL || secrets.RASTER_ANALYTICS_STATUS_URL || 'sfvn://maxar-cloud-optimized-archive' }}
+          RASTER_ANALYTICS_STATUS_URL: sfvn://maxar-cloud-optimized-archive
           RASTER_ANALYTICS_TOKEN: ${{ secrets.RASTER_ANALYTICS_TOKEN }}
           RASTER_ANALYTICS_GITHUB_PAT: ${{ secrets.RASTER_ANALYTICS_GITHUB_PAT }}
           MAXAR_API_KEY: ${{ secrets.MAXAR_API_KEY }}
